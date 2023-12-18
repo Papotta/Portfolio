@@ -39,7 +39,7 @@ export const Contact = () => {
     }
   
     setButtonText("Sending...");
-    let response = await fetch(`https://portfolio-production-92da.up.railway.app/mail`, {
+    let response = await fetch(`portfolio-production-92da.up.railway.app/mail`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
