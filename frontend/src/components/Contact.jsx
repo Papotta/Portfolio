@@ -37,7 +37,8 @@ export const Contact = () => {
     setButtonText("Sending...");
 
     try {
-      const response = await fetch(`https://portfolio-production-92da.up.railway.app/mail`, {
+      const apiUrl = import.meta.env.VITE_URL || 'http://localhost:3000';
+      const response = await fetch(`${apiUrl}/mail`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -46,7 +47,6 @@ export const Contact = () => {
       });
 
       if (response.ok) {
-        const result = await response.json();
         setFormDetails(formInitialDetails);
 
         setStatus({ success: true, message: 'Message sent successfully' });
@@ -72,7 +72,6 @@ export const Contact = () => {
             <div>
               <h2>Get In Touch</h2>
               <form onSubmit={handleSubmit}>
-                {/* ... (otras entradas de formulario) */}
                 <Col size={12} className="px-1">
                   <textarea
                     rows="6"
