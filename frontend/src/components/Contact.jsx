@@ -23,9 +23,9 @@ export const Contact = () => {
       })
   }
 
-  const URL = process.env.NODE_ENV === 'production'?
-  import.meta.env.BASE_URL :
-  'http://localhost:3000'
+  // const URL = process.env.NODE_ENV === 'production'?
+  // import.meta.env.BASE_URL :
+  // 'http://localhost:3000'
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,7 +39,7 @@ export const Contact = () => {
     }
   
     setButtonText("Sending...");
-    let response = await fetch(`portfolio-production-92da.up.railway.app/mail`, {
+    let response = await fetch(`/mail`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
