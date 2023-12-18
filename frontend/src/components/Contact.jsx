@@ -37,7 +37,7 @@ export const Contact = () => {
     setButtonText("Sending...");
 
     try {
-      const apiUrl = import.meta.env.VITE_URL || 'http://localhost:3000';
+      // const apiUrl = import.meta.env.VITE_URL || 'http://localhost:3000';
       const response = await fetch(`absurd-coil-production.up.railway.app/mail`, {
         method: "POST",
         headers: {
