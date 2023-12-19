@@ -38,7 +38,7 @@ export const Contact = () => {
 
     try {
       // const apiUrl = import.meta.env.VITE_URL || 'http://localhost:3000';
-      const response = await fetch(`absurd-coil-production.up.railway.app/mail`, {
+      const response = await fetch(`https://absurd-coil-production.up.railway.app/mail`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
