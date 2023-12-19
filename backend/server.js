@@ -3,14 +3,11 @@ const cors = require("cors");
 require('dotenv').config();
 const nodemailer = require("nodemailer");
 
-
 const app = express();
 const port = process.env.PORT || 3000;
 
-
 app.use(cors());
 app.use(express.json());
-
 
 const router = express.Router();
 app.use("/", router);
@@ -22,7 +19,6 @@ const contactEmail = nodemailer.createTransport({
     pass: process.env.GMAIL_PASS
   },
 });
-
 
 const rexInput = (input) => {
   const RexexInput = input.replace(/[^\w\s]/gi, '');
@@ -45,7 +41,6 @@ router.post("/mail", (req, res) => {
            <p>Message: ${message}</p>`,
   };
 
-
   contactEmail.sendMail(mail, (error) => {
     if (error) {
       console.error("Error sending email:", error);
@@ -58,5 +53,5 @@ router.post("/mail", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server Running on http://localhost:${port}`)
+  console.log(`Server Running on http://localhost:${port}`);
 });
