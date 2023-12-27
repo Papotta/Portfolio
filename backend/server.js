@@ -18,6 +18,8 @@ const contactEmail = nodemailer.createTransport({
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_PASS
   },
+  port: 465,
+  host: "smtp.gmail.com",
 });
 
 const rexInput = (input) => {

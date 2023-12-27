@@ -27,9 +27,6 @@ export const Banner = () => {
           <div className="foto">
           <img src={yo} alt="Lucas Mazzarino" className="foto-img" />
           </div>
-          <div className="bomb">
-            <img src={headerImg} alt="Header Img" />
-          </div>
         </Col>
       </Row>
     </Container>
