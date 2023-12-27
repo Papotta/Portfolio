@@ -12,13 +12,14 @@ app.use(express.json());
 const router = express.Router();
 app.use("/", router);
 
-const contactEmail = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_PASS
   },
   port: 465,
+  secure: true,
   host: "smtp.gmail.com",
 });
 
@@ -43,7 +44,7 @@ router.post("/mail", (req, res) => {
            <p>Message: ${message}</p>`,
   };
 
-  contactEmail.sendMail(mail, (error) => {
+  transporter.sendMail(mail, (error, res) => {
     if (error) {
       console.error("Error sending email:", error);
       res.status(500).json({ success: false, message: 'Error sending email. Please try again later.' });
