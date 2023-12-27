@@ -44,7 +44,7 @@ router.post("/mail", (req, res) => {
            <p>Message: ${message}</p>`,
   };
 
-  transporter.sendMail(mail, (error, res) => {
+  transporter.sendMail(mail, (error) => {
     if (error) {
       console.error("Error sending email:", error);
       res.status(500).json({ success: false, message: 'Error sending email. Please try again later.' });
