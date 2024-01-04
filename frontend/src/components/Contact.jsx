@@ -71,7 +71,7 @@ export const Contact = () => {
           <Col size={12} md={6}>
                 <div >
                 <h2>Get In Touch</h2>
-                <form action="https://formsubmit.co/bf61624e3192330f19e55e58fb239566" method="POST">
+                <form action="https://formsubmit.co/el/zalaru" method="POST">
                   <Row>
                     <Col size={12} sm={6} className="px-1">
                       <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} required/>
