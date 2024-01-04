@@ -23,43 +23,43 @@ export const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    if (!formDetails.firstName || !formDetails.lastName || !formDetails.email) {
-      setStatus({
-        success: false,
-        message: 'Please fill in all required fields.',
-      });
-      return;
-    }
+  //   if (!formDetails.firstName || !formDetails.lastName || !formDetails.email) {
+  //     setStatus({
+  //       success: false,
+  //       message: 'Please fill in all required fields.',
+  //     });
+  //     return;
+  //   }
 
-    setButtonText("Sending...");
+  //   setButtonText("Sending...");
 
-    try {
-      // const apiUrl = import.meta.env.VITE_URL || 'http://localhost:3000';
-      const response = await fetch(`https://absurd-coil-production.up.railway.app/mail`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formDetails),
-      });
+  //   try {
+  //     // const apiUrl = import.meta.env.VITE_URL || 'http://localhost:3000 https://absurd-coil-production.up.railway.app/mail';
+  //     const response = await fetch(`http://localhost:3000/mail`, {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(formDetails),
+  //     });
 
-      if (response.ok) {
-        setFormDetails(formInitialDetails);
+  //     if (response.ok) {
+  //       setFormDetails(formInitialDetails);
 
-        setStatus({ success: true, message: 'Message sent successfully' });
-      } else {
-        setStatus({ success: false, message: 'Something went wrong, please try again later.' });
-      }
-    } catch (error) {
-      console.error("Error sending email:", error);
-      setStatus({ success: false, message: 'Error sending email. Please try again later.' });
-    } finally {
-      setButtonText("Send");
-    }
-  };
+  //       setStatus({ success: true, message: 'Message sent successfully' });
+  //     } else {
+  //       setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+  //     }
+  //   } catch (error) {
+  //     console.error("Error sending email:", error);
+  //     setStatus({ success: false, message: 'Error sending email. Please try again later.' });
+  //   } finally {
+  //     setButtonText("Send");
+  //   }
+  // };
 
   return (
     <section className="contact" id="connect">
@@ -71,7 +71,7 @@ export const Contact = () => {
           <Col size={12} md={6}>
                 <div >
                 <h2>Get In Touch</h2>
-                <form onSubmit={handleSubmit}>
+                <form action="https://formsubmit.co/bf61624e3192330f19e55e58fb239566" method="POST">
                   <Row>
                     <Col size={12} sm={6} className="px-1">
                       <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} required/>
@@ -87,6 +87,7 @@ export const Contact = () => {
                     </Col>
                     <Col size={12} className="px-1">
                       <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)} required></textarea>
+                      <input type="hidden" name="_captcha" value="false"></input>
                       <button type="submit"><span>{buttonText}</span></button>
                     </Col>
                     {

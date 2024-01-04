@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/baner-img.svg";
 import yo from "../assets/img/yo.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
@@ -8,9 +7,12 @@ export const Banner = () => {
 
   return (
     <section className="banner" id="Home">
-      <Container>
+      <Container className="content">
       <Row className="aligh-items-center">
-        <Col xs={12} md={6} xl={7}>
+        <Col xs={12} md={12} xl={12} className="text-center">
+        <div className="foto">
+          <img src={yo} alt="Lucas Mazzarino" className="foto-img" />
+          </div>
           <span className="tagline">Welcome to my Portfolio</span>
           <h1>Hi! I'm Lucas Mazzarino Analyst Programmer</h1>
           <p>
@@ -22,11 +24,6 @@ export const Banner = () => {
               <ArrowRightCircle size={25} />
             </a>
           </button>
-        </Col>
-        <Col xs={12} md={6} xl={5}>
-          <div className="foto">
-          <img src={yo} alt="Lucas Mazzarino" className="foto-img" />
-          </div>
         </Col>
       </Row>
     </Container>

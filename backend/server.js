@@ -18,7 +18,6 @@ const transporter = nodemailer.createTransport({
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_PASS
   },
-  port: 465,
   secure: true,
   host: "smtp.gmail.com",
 });
@@ -58,3 +57,5 @@ router.post("/mail", (req, res) => {
 app.listen(port, () => {
   console.log(`Server Running on http://localhost:${port}`);
 });
+
+

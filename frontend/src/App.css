@@ -205,13 +205,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Banner Css ************/
 .banner {
-  margin-top: 0;
+  margin: 0;
   padding: 260px 0 100px 0;
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
   background: rgb(19, 19, 70);
   background: linear-gradient(0deg, rgba(19, 19, 70, 1) 25%, rgba(7, 3, 18, 1) 56%);
+}
+.banner .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
 }
 .banner .tagline {
   font-weight: 700;
@@ -280,7 +286,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 15px;
+  margin: 2px;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
@@ -301,7 +307,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner .foto .foto-img {
   max-width: 300px;
-  margin-left: 70px; 
+  margin-left: auto; 
+  margin-right: auto;
   margin-bottom: 3rem;
   border-radius: 18px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -311,20 +318,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner .foto .foto-img:hover {
   transform: scale(1.1);
 }
-.banner .bomb {
-  animation: updown 3s linear infinite;
-}
-@keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
-}
+
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
@@ -387,27 +381,27 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 @media (max-width: 768px) {
   .skill-bx {
-    padding: 20px; /* Ajusta el padding según sea necesario para un mejor ajuste */
-    margin-top: -40px; /* Ajusta el margen superior para mantener la apariencia */
+    padding: 20px; 
+    margin-top: -40px; 
   }
 
   @media (max-width: 600px) {
     .skill .item {
-      flex-direction: row; /* Muestra los íconos en 2 columnas */
-      justify-content: space-between; /* Distribuye los íconos horizontalmente */
+      flex-direction: row; 
+      justify-content: space-between; 
       margin: 0 auto 15px auto;
     }
   }
 
   .skill .items {
-    margin: 0 0 15px 0; /* Ajusta los márgenes para un mejor espaciado */
+    margin: 0 0 15px 0; 
   }
 }
-/* Ajustes para pantallas aún más pequeñas (menor a 600px) */
+
 @media (max-width: 600px) {
   .skill .item {
-    flex-direction: column; /* Muestra los íconos en una columna */
-    text-align: center; /* Centra los íconos y los textos */
+    flex-direction: column; 
+    text-align: center;
     margin: 0 auto 15px auto;
   }
 }
