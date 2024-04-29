@@ -48,7 +48,7 @@ export const Projects = () => {
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Tab.Content id="slideInUp">
                     <Tab.Pane eventKey="first">
-                      <Row>
+                      <Row className="cont">
                         {
                           projects.map((project, index) => {
                             return (
