@@ -123,15 +123,17 @@ nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;
     color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
 }
 span.navbar-text {
     display: flex;
     align-items: center;
 }
 .social-icon {
-    display: inline-block;
+    display: flex;
     margin-left: 14px;
+    justify-content: end;
+    align-items: end;
 }
 .social-icon a {
     width: 42px;
@@ -239,18 +241,32 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 	transform: translateY(8px) rotate(-45deg);
-	background-color: #fff;
+	background-color: #ffffff;
 	height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
 
+
+@media (max-width: 991px) {
+  .navbar-link {
+    display: block;
+    width: auto; 
+    text-align: right;
+    padding: 0.5rem 1rem;
+  }
+
+  .social-icon {
+    text-align: right; /* Alinear los iconos a la derecha */
+    margin-top: 10px; /* Ajustar el margen superior para separarlos del texto */
+  }
+}
 /************ Banner Css ************/
 .banner {
   margin: 0;
   padding: 260px 0 100px 0;
-  background: linear-gradient(0deg, rgba(19, 19, 70, 1) 25%, rgba(7, 3, 18, 1) 56%);
+  background: linear-gradient(0deg, rgb(58, 22, 104) 25%, rgb(9, 4, 26) 62%);
 }
 .banner .content {
   display: flex;

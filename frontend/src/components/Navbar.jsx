@@ -38,18 +38,30 @@ export const NavBar = () => {
           Lucas <span>Mazzarino</span>
         </Navbar.Brand> 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="me-auto">
             <Nav.Link href="#Home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
             <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
             <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Proyects</Nav.Link>
           </Nav>
-          <span className='navbar-text'>
-            <div className='social-icon'>
-              <a href='https://www.linkedin.com/in/lucas-mazzarino-594b88229/' target='-blank' rel="noopener noreferrer"> <img src={navIcon1} alt=''/></a>
-              <a href='https://github.com/Papotta' target='-blank' rel="noopener noreferrer"> <img src={github} alt=''/></a>
+           <div className="navbar-text">
+            <div className="social-icon"> {/* Flexbox para centrar */}
+              <a
+                href="https://www.linkedin.com/in/lucas-mazzarino-594b88229/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={navIcon1} alt="LinkedIn" />
+              </a>
+              <a
+                href="https://github.com/Papotta"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={github} alt="GitHub" />
+              </a>
             </div>
-          </span>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
