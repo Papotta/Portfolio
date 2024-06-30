@@ -1,9 +1,7 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col, Tab} from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import gem from "../assets/img/gem.jpg";
-import projImg3 from "../assets/img/project-img3.png";
 import sparta from '../assets/img/sparta.jpg';
-// import 'animate.css';
 
 export const Projects = () => {
 
