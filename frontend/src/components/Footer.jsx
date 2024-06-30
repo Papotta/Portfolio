@@ -14,7 +14,7 @@ export const Footer = () => {
           <Col sm={6} className="text-center text-sm-end">
             <div className="social-icon">
               <a href='https://www.linkedin.com/in/lucas-mazzarino-594b88229/' target='-blank' rel="noopener noreferrer"> <img src={navIcon1} alt='' /></a>
-              <a href='https://github.com/Papotta' target='-blank' rel="noopener noreferrer"> <img src={github} alt='' /></a>
+              <a href='https://github.com/LucasMazzarino' target='-blank' rel="noopener noreferrer"> <img src={github} alt='' /></a>
             </div>
             <p>CopyRigth 2022. All right Reserved</p>
           </Col>
