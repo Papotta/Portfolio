@@ -67,7 +67,7 @@ const skills = [
   { icon: "devicon:vuejs", name: "Vue.js" },
   { icon: "logos:python", name: "Python" },
   { icon: "skill-icons:django", name: "Django" },
-  { icon: "devicon-plain:djangorest-wordmark", name: "Django Rest Framework" },
+  { icon: "devicon-plain:djangorest-wordmark", name: "DRF" },
   { icon: "vscode-icons:file-type-html", name: "HTML" },
   { icon: "vscode-icons:file-type-css", name: "CSS" },
   { icon: "devicon:typescript", name: "Typescript" },
