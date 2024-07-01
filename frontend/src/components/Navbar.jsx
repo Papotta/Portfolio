@@ -1,7 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../assets/img/logo2.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import github from '../assets/img/github.svg'
 
