@@ -1,23 +1,21 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col, Tab} from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import gem from "../assets/img/gem.jpg";
-import projImg3 from "../assets/img/project-img3.png";
 import sparta from '../assets/img/sparta.jpg';
-// import 'animate.css';
 
 export const Projects = () => {
 
   const projects = [
     {
       title: "Gemstone Uruguay",
-      description: "This project was developed for Gemstone Uruguay, a jewelry store in Uruguay, with the goal of creating a robust and efficient e-commerce platform.The application was built using modern technologies, focusing on optimal performance and an excellent user experience. Developed using 100% Typescript",
+      description: "This project was developed for Gemstone Uruguay, a jewelry store in Uruguay. Developed using 100% Typescript",
       imgUrl: gem,
       url: "https://github.com/LucasMazzarino/Gemstone",
       labels: ["React","Next.js", "TypeScript", "Payload CMS", "Express.js" , "tRPC", "Mongodb", "Zustand", "Tailwind"]
     },
     {
       title: "Sparta Gym",
-      description: "Custom Software for Comprehensive Gym Managemen. This custom software was developed to provide complete administration for a gym, handling various aspects crucial to its operation. The application offers an integrated solution to manage users, courses, schedules, payments, course absences, and pending payments efficiently.",
+      description: "Custom Software for Comprehensive Gym Managemen. This custom software was developed to provide complete administration for a gym",
       url: "https://github.com/LucasMazzarino/Gestion-sparta-gym",
       imgUrl: sparta,
       labels: ["Python", "Django", "Django Rest Framework", "JavaScript", "React", "Redux", "PostgreSQL"]
