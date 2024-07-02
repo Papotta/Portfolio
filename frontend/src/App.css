@@ -338,6 +338,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 96%;
   margin: 2rem auto;
 }
+.banner button {
+  background-color: rgb(26, 25, 25);
+}
 .banner button a {
   color: #fff;
   font-weight: 700;
