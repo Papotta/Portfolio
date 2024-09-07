@@ -2,10 +2,17 @@ import { Container, Row, Col, Tab} from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import gem from "../assets/img/gem.jpg";
 import sparta from '../assets/img/sparta.jpg';
+import asya from "../assets/img/asyacap_.webp"
 
 export const Projects = () => {
 
   const projects = [
+    {
+      title: "Asya.uy",
+      description: "E-commerce platform for retail sales by a large wholesale importer.",
+      imgUrl:asya,
+      labels: ["React","Next.js", "TypeScript", "Payload CMS", "Express.js" , "tRPC", "Mongodb", "Zustand", "Tailwind"]
+    },
     {
       title: "Gemstone Uruguay",
       description: "This project was developed for Gemstone Uruguay, a jewelry store in Uruguay. Developed using 100% Typescript",
@@ -44,12 +51,6 @@ export const Projects = () => {
                           })
                         }
                       </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
