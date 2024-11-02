@@ -11,6 +11,7 @@ export const Projects = () => {
       title: "Asya.uy",
       description: "E-commerce platform for retail sales by a large wholesale importer.",
       imgUrl:asya,
+      url: "https://github.com/LucasMazzarino/Asya",
       labels: ["React","Next.js", "TypeScript", "Payload CMS", "Express.js" , "tRPC", "Mongodb", "Zustand", "Tailwind"]
     },
     {
